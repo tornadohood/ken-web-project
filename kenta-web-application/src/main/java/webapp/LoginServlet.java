@@ -36,9 +36,8 @@ public class LoginServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		
-		String name = request.getParameter("name");
-		
-		request.setAttribute("name", name);
+		request.setAttribute("name", request.getParameter("name"));
+		request.setAttribute("password", request.getParameter("password"));
 		
 		//System.out.println(request.getParameter("name"));
 		
